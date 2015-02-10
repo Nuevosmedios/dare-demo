@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>DARE - Estudiante</title>
+
+		<!-- IntroJS -->
+		<link href="css/introjs.css" rel="stylesheet">
+			<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		    <!-- Custom Fonts -->
+    	<link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+			<!-- CSS -->
+		<link rel="stylesheet" href="css/custom.css">
+		<link href="css/hover.css" rel="stylesheet" media="all">
+
+	</head>
+
+<body>
+<div id="home-admin">	
+			<!-- navbar principal -->
+			<nav data-step="8" data-intro="En este lugar puedes ver tu nombre y tu foto, también puedes cerrar sesión cuando lo desees" class="navbar navbar-default" role="navigation">
+			<div class="row-fluid">
+				<div class="col-md-6">
+					<div class="navbar-header">
+						<div id="logo" class="pull-left">
+							<img src="images/logo.png" alt="" class="img-responsive">
+						</div>
+					</div>
+					<div id="info-navbar" class="hidden-xs">
+						<i>D.A.R.E.<br>Diagnóstico de Alto Rendimiento & Entrenamiento</i>
+					</div>	
+				</div>
+				<div class="col-md-3">
+					<div class="row">
+					<div class="col-xs-4 col-md-2 logoSchool">
+						<img src="images/colegioDefault.png" alt="colegio">
+					</div>
+					<div class="col-xs-8 col-md-10 nameSchool">Colegio Santiago Apóstol</div>
+				</div>	
+				</div>
+				<div class="col-md-3">
+					<div class="row student-style">
+					<div class="col-xs-4 col-md-4 text-center image-user">
+						<img src="images/avatar-alumno.png" alt="avatar"  class="img-circle avatar-default">
+					</div>
+					<div class="col-xs-5 col-md-5 text-center name-user">
+						<span>Jeison Trochez</span>
+					</div>
+					<div class="col-xs-3 col-md-3 text-center sing-out">
+						<a href="/" class="grow"><i class="fa fa-sign-in fa-2x"></i></a>
+					</div>
+				</div>	
+				</div>	
+			</div>
+			</nav>
+			
+			<!-- Menu for devices-->	
+			<nav class="navbar-default navbar-fixed-bottom visible-xs" role="navigation">
+				<div id="menu-small" class="row">
+					<a href="mi-evaluacion.html">
+						<div class="col-xs-4 text-center panel-green">
+							<i class="fa fa-file-text-o fa-4x style-menu-small"></i>
+						</div>
+					</a>
+					<a href="Reportes-estudiante.html">
+						<div class="col-xs-4 text-center panel-yellow">
+							<i class="fa fa-pie-chart fa-4x style-menu-small"></i>
+						</div>
+					</a>
+					<a href="perfil-student.html">
+						<div class="col-xs-4 text-center panel-red">
+							<i class="fa fa-cog fa-4x style-menu-small"></i>
+						</div>
+					</a>
+				</div>
+			</nav>
+			<!-- End Menu for devices-->	
+		
+
+	<div id="wrapper">
+
+				<div id="sidebar-wrapper">
+				    <ul class="sidebar-nav">
+				        <li class="sidebar-brand">
+				            <a href="perfil-student.html">Mi Cuenta<i class="fa fa-arrow-circle-right fw"></i></a>
+				            <i data-toggle="tooltip" title="Edite su perfil." class="fa fa-question-circle pull-right question-style"></i>
+				        </li> 
+				        <li class="sidebar-brand guided-tour">
+				            <a href="#">Visita Guiada<i class="fa fa-arrow-circle-right fw"></i></a>
+				            <i data-toggle="tooltip" title="Recorrido sobre cada uno de las secciones del D.A.R.E." class="fa fa-question-circle pull-right question-style"></i>
+				        </li>   
+				    </ul>
+			    </div>	
+
+				<a href="#menu-toggle" class="btn btn-default hidden-xs btn-toggle" id="menu-toggle">
+					<i class="fa fa-cog fa-3x"></i>
+				</a>
+
+				<div class="col-md-2 pull-right text-center hidden-xs">
+					<a href="#" class="btn btn-tour-custom guided-tour"><i class="fa fa-binoculars"></i></a>
+					<br>
+					<span>Visita Guiada</span>
+				</div> 
+
+			<div id="page-content-wrapper">
+			    <div class="container-fluid">
+
+		            <h2 data-step="1" data-intro="En la barra de Configuración encontrarás accesos directos a las acciones que más usas" class="title-h2 hidden-xs"><i class="fa fa-cube fa-fw"></i>Configuración: Estudiante</h2>
+		            <i data-toggle="tooltip" title="Conozca cuáles son sus acciones disponibles." class="fa fa-question-circle pull-right question-style"></i>
+
+			    	<!-- Menu for Desktop-->	
+		            <div id="menu-desktop" class="row hidden-xs">
+
+		            	<div data-step="2" data-intro="Dando clic en este botón visualizaras las evaluaciones presentadas."class="col-lg-6 col-md-6 grow">
+		                    <div class="panel panel-default panel-shadow">
+		                    	<a href="mi-evaluacion.html" class="fade-green">
+		                        <div class="panel-heading">
+		                            <div class="row">
+		                                <div class="text-center">
+		                                	<i class="fa fa-file-text-o fa-4x"></i>
+		                                </div>
+		                                <i data-toggle="tooltip" title="Revisa tus evaluaciones o las evaluaciones de tu hijo o hija." class="fa fa-question-circle pull-right question-style"></i>
+		                            </div>
+		                        </div>
+		                        </a>
+		                        <a href="mi-evaluacion.html">
+		                            <div class="panel-footer panel-green text-center">
+		                                <span>Mis Evaluaciones</span>
+		                                <span><i class="fa fa-arrow-circle-right fw"></i></span>
+		                                <div class="clearfix"></div>
+		                            </div>
+		                        </a>
+		                    </div>
+		                </div>
+
+		                <div data-step="3" data-intro="Los reportes le van a permitir ver las estadísticas de sus evaluaciones en forma de reportes gráficos"class="col-lg-6 col-md-6 grow">
+		                    <div class="panel panel-default panel-shadow">
+                            	<a href="Reportes-estudiante.html" class="fade-blue">
+		                        <div class="panel-heading">
+		                            <div class="row">
+		                                <div class="text-center">
+		                                    <i class="fa fa-bar-chart fa-4x"></i>
+		                                </div>
+		                                <i data-toggle="tooltip" title="Los reportes le van a permitir ver las estadísticas de sus evaluaciones en forma de reportes gráficos" class="fa fa-question-circle pull-right question-style"></i>	
+		                            </div>
+		                        </div>
+                            	</a>
+		                        <a href="Reportes-estudiante.html">
+		                            <div class="panel-footer panel-blue text-center">
+		                                <span>Reportes Individuales</span>
+		                                <span><i class="fa fa-arrow-circle-right fw"></i></span>
+		                                <div class="clearfix"></div>
+		                            </div>
+		                        </a>
+		                    </div>
+		                </div>
+		            </div>
+
+		            <h2 data-step="4" data-intro="En la barra de actividad reciente encontrarás todo lo relacionado con la actividad reciente de la aplicación" class="title-h2"><i class="fa fa-calendar fa-fw"></i>Actividad Reciente</h2>
+		            <i data-toggle="tooltip" title="Revise sus acciones más recientes." class="fa fa-question-circle pull-right question-style"></i>
+
+					<!-- info - 1 -->
+					
+		           
+		            <div data-step="6" data-intro="Muestra todos reportes visitados" class="actividad-reciente">
+
+		            	<div class="col-md-3 bg-actividad-reciente height-100">
+
+		            		<h4><i class="fa fa-pie-chart fa-fw"></i>Reportes visitados</h4>
+		            		<a href="Reportes-estudiante.html" class="btn btn-success btn-block">Ir a reportes</a>
+		            	</div>
+
+						
+
+		            	<div class="col-md-9 bg-actividad-reciente-info height-100">
+		            		<div class="row">
+		            			<div class="col-md-4">
+		            				<h4>Fecha</h4>
+		            				<ul class="list-unstyled">
+		            					<li>
+											Enero 10 2014
+		            					</li>
+		            				</ul>
+		            			</div>
+		            			<div class="col-md-4">
+		            				<h4>Nombre</h4>
+		            				<ul class="list-unstyled">
+		            					<li>
+											Reporte general
+		            					</li>
+		            				</ul>
+		            			</div>
+		            			<div class="col-md-4">
+		            				<h4>Información General</h4>
+		            				<ul class="list-unstyled">
+		            					<li>
+											Reporte comparativo
+		            					</li>
+		            				</ul>
+		            			</div>
+		            		</div>
+		            	</div>
+		            	
+		            </div>
+
+
+					<!-- info - 2 -->
+
+					<div data-step="7" data-intro="Revisa tu Perfil" class="actividad-reciente">
+
+		            	<div class="col-md-3 bg-actividad-reciente height-100">
+
+		            		<h4><i class="fa fa-male fa-fw"></i>Mi Cuenta</h4>
+		            		<a href="perfil-student.html" class="btn btn-success btn-block">Ir a Mi Cuenta</a>
+		            	</div>
+
+						
+
+		            	<div class="col-md-9 bg-actividad-reciente-info height-100">
+		            		<div class="row">
+		            			<div class="col-md-4">
+		            				<h4>Fecha</h4>
+		            				<ul class="list-unstyled">
+		            					<li>
+											Enero 10 2014
+		            					</li>
+		            				</ul>
+		            			</div>
+		            			<div class="col-md-4">
+		            				<h4>Detalle</h4>
+		            				<ul class="list-unstyled">
+		            					<li>
+											Actualización de Datos
+		            					</li>
+		            				</ul>
+		            			</div>
+		            		</div>
+		            	</div>
+		            	
+		            </div>
+
+		        </div>
+		    </div>
+
+	</div>
+</div>
+		<footer class="footer-dare text-center">
+			<img src="images/logoFooterNM.png" alt="logo-NM-small">
+		</footer>
+		
+	
+
+	<!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- IntroJS -->
+	<script type="text/javascript" src="js/intro.js"></script>
+
+</body>
+
+	<script>
+	$('.guided-tour').click(function() {
+			var introguide = introJs(); 
+			introguide.setOptions({
+				"nextLabel": "Siguiente",
+				"prevLabel": "Anterior",
+				"skipLabel": "Saltar",
+				"doneLabel": "Terminar"
+			});
+			introguide.start();
+		});
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    $('i[data-toggle="tooltip"]').tooltip({
+    animated: 'fade',
+    placement: 'bottom',
+	});
+    </script>
+
+</html>

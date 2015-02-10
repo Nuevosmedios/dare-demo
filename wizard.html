@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>DARE - Wizard</title>
+	<!-- IntroJS -->
+	<link href="css/introjs.css" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom Fonts -->
+    <link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- CSS -->
+	<link href="css/hover.css" rel="stylesheet" media="all">		
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/wizard.css">
+	<script src="js/handlebars-v2.0.0.js"></script>
+
+<body>
+	
+	<!-- navbar principal -->
+			<nav class="navbar navbar-default" role="navigation">
+			<div class="row-fluid">
+				<div class="col-md-6">
+					<div class="navbar-header">
+						<div id="logo" class="pull-left">
+							<img src="images/logo.png" alt="" class="img-responsive">
+						</div>
+					</div>
+					<div id="info-navbar" class="hidden-xs">
+						<i>D.A.R.E.<br>Diagnóstico de Alto Rendimiento & Entrenamiento</i>
+					</div>	
+				</div>
+				<div class="col-md-3">
+					<div class="row">
+					<div class="col-xs-4 col-md-2 logoSchool">
+						<img src="images/colegioDefault.png" alt="colegio">
+					</div>
+					<div class="col-xs-8 col-md-10 nameSchool">Colegio Santiago Apóstol</div>
+				</div>	
+				</div>
+				<div class="col-md-3">
+					<div class="row admin-style">
+					<div class="col-xs-4 col-md-4 text-center image-user">
+						<img src="images/avatar-rector.png" alt="avatar"  class="img-circle avatar-default">
+					</div>
+					<div class="col-xs-5 col-md-5 text-center name-user">
+						<span>Fransisco Palacios</span>
+					</div>
+					<div class="col-xs-3 col-md-3 text-center sing-out">
+						<a href="/" class="grow"><i class="fa fa-sign-in fa-2x"></i></a>
+					</div>
+				</div>	
+				</div>	
+			</div>
+			</nav>
+	<!-- End navbar principal -->
+
+<div class="box-heading">
+	<div class="col-md-1 btn_back">
+		<a href="home-admin.html" class="btn hidden-xs btn-toggle btn-back-admin" id="menu-toggle">
+			<i class="fa fa-arrow-left fa-3x"></i>
+		</a>
+	</div>
+
+	<div class="col-md-9">
+		<h3 class="text-center">Nueva Evaluación</h3>	
+	</div>
+
+	<div id="btnTour" class="col-md-2 pull-right text-center hidden-xs">
+		<a href="#" class="btn btn-tour-custom guided-tour"><i class="fa fa-binoculars"></i></a>
+		<br>
+		<span>Visita Guiada</span>
+	</div> 
+</div>
+
+<div class="clearfix"></div>
+
+	<!-- multistep form -->
+
+<div id="msform">
+	<!-- progressbar -->
+			<div class="progresswrap" data-step="1" data-intro="Barra de avance: indica los pasos de creación de una evaluación.">
+				<ul id="progressbar">
+					<li class="active" data-step="2" data-intro="Paso 1: Parametrización de la evaluación."><span>Propiedades</span></li>
+					<li data-step="10" data-intro="Paso 2: Escoge las asignaturas a evaluar."><span>Áreas - Asignaturas</span></li>
+					<li data-step="16" data-intro="Paso 3: Escoge los temas por componente a evaluar."><span>Temas</span></li>
+			   		<li data-step="21" data-intro="Paso 4: Escoge la plantilla para generar el cuadernillo."><span>Plantillas</span></li>
+			   		<li data-step="25" data-intro="Paso 5: Previsualización de la evaluación."><span>Previsualización</span></li>
+				</ul>
+			</div>
+
+	<!-- fieldsets 1 -->
+	<fieldset>
+			<h3 class="visible-xs">Propiedades</h3>
+			<br class="visible-xs">
+			<p><i>Ingrese la información requerida en los siguientes campos. Recuerde que todos los campos del formulario son obligatorios.</i></p>
+		<div class="col-md-offset-3 col-md-6 well text-left">
+			<form>
+				<div class="form-group" data-step="3" data-intro="Ingrese un título para su evaluación; por ejemplo: Evaluación de refuerzo.">
+					<label for="tipo-examen">Nombre de Evaluación:</label>
+					<input type="text" class="form-control" placeholder="Escriba el nombre de la evaluación">
+				</div>
+				<hr>
+				<div class="form-group" data-step="4" data-intro="Escoge el tipo de examen que desea asignar.">
+					<label for="tipo-examen">Tipo de Exámen:</label>
+					<select type="text" class="form-control">
+						<option selected="selected" class="hidden-selected">Elija el tipo de exámen</option>
+						<option>Evaluación Periódica</option>
+						<option>Quiz</option>
+						<option>Pre - SABER</option>
+						<option>Saber Pro</option>
+					</select>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6 form-group" data-step="5" data-intro="Escoge el período al que corresponde la evaluación.">
+						<label for="Período">Período:</label>
+						<select type="text" class="form-control">
+							<option selected="selected" class="hidden-selected">Elija el Período</option>
+							<option>Período I</option>
+							<option>Período II</option>
+							<option>Período III</option>
+							<option>Período IV</option>
+							<option>Saber Pro</option>
+						</select>
+					</div>
+					<div class="col-md-6 form-group" data-step="6" data-intro="Escoge el grado al que va dirigido la evaluación.">
+						<label for="grados">Grados:</label>
+						<select type="text" class="form-control">
+							<option selected="selected" class="hidden-selected">Elija el grado</option>
+							<option>12°</option>
+							<option>11°</option>
+							<option>10°</option>
+							<option>9°</option>
+							<option>8°</option>
+							<option>7°</option>
+							<option>6°</option>
+							<option>5°</option>
+							<option>4°</option>
+							<option>3°</option>
+							<option>2°</option>
+							<option>1°</option>
+							<option>Ciclo I</option>
+							<option>Ciclo II</option>
+							<option>Ciclo III</option>
+							<option>Ciclo IV</option>
+							<option>Ciclo V</option>
+							<option>Ciclo VI</option>
+							<option>Ciclo VII</option>
+							<option>Ciclo VIII</option>
+							<option>Ciclo VI</option>
+							<option>Ciclo IX</option>
+							<option>Ciclo X</option>
+							<option>Ciclo XI</option>
+							<option>Ciclo XII</option>
+							<option>Transición</option>
+							<option>Jardin</option>
+							<option>Pre - Jardin</option>
+							<option>PreIcfes - 01</option>
+							<option>PreIcfes - 02</option>
+							<option>PreIcfes - 03</option>
+							<option>PreIcfes - 04</option>
+							<option>PreIcfes - 05</option>
+							<option>PreIcfes - 06</option>
+							<option>PreIcfes - 07</option>
+							<option>PreIcfes - 08</option>
+							<option>PreIcfes - 09</option>
+							<option>PreIcfes - 10</option>
+							<option>PreIcfes - 11</option>
+							<option>PreIcfes - 12</option>
+							<option>Saber-Pro</option>
+						</select>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-6 form-group" data-step="7" data-intro="Seleccione la escala de calificación de acuerdo a lo estipulado por la institución educativa.">
+						<label for="esquema">Esquema de Evaluación:</label>
+						<select id="select-calification" type="text" class="form-control">
+							<option selected="selected" class="hidden-selected" label="Elija el Esquema de Evaluación"></option>
+							<option value="0">Cualitativo</option>
+							<option value="1">Cuantitativo</option>
+						</select>
+					</div>
+					<div class="col-md-6 form-group" data-step="8" data-intro="En este campo se reflejan los valores de calificación de acuerdo a la escala elejida en el campo anterior. Seleccione el valor que más se ajuste a su evaluación.">
+						<label for="calificacion">Base de Calificación:</label>
+						<select id="select-rank" type="text" class="form-control" >
+							<option selected="selected" class="hidden-selected label-selected" label="Elija la base de calificación"></option>
+						</select>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="clearfix"></div>
+
+		<input id="btnNext1" style="width:50%" type="button" name="next" class="next btn btn-lg btn-success" value="Continuar"  data-step="9" data-intro="Este botón permite guardar la parametrización del paso 1 y continuar con el paso 2." />
+		<footer class="footer-dare text-center">
+			<img src="images/logoFooterNM.png" alt="logo-NM-small">
+		</footer>	  
+	</fieldset>
+
+	<!-- fieldsets 2-->
+	<fieldset>
+			<h3 class="visible-xs">Áreas - Asignaturas</h3>
+			<br class="visible-xs">
+			<p><i>Elige las áreas y asignaturas que desea evaluar en este  banco de preguntas. Recuerde ingresar el número total de preguntas por cada área y por cada asignatura.</i></p>
+		<div class="asignaturas">
+    		<div class="col-md-4">
+	        	<div class="well well-icfes altura-asignatura text-left" data-step="11" data-intro="Escoge una o más asignaturas del área a evaluar.">
+				    <table class="table table-dare">
+				    	<thead>
+							<tr class="tema">
+								<th class="text-center">
+									<div class="style-checkbox" data-step="12" data-intro="Active esta opción si desea elegir todas las asignaturas del área." data-position="right">
+										<input type="checkbox" id="area-1" class="select-all" data-id="1" data-type="area">
+  										<label for="area-1"></label>
+  									</div>
+  								</th>
+								<th><h3 class="text-center">Ciencias Naturales</h3></th>
+								<th><input class="cantidad" type="text" name="parent-1" value="0" data-step="13" data-intro="Ingrese el número de preguntas que debe tener cada asignatura.">Cantidad</th>
+							</tr>
+						</thead>
+				      <tbody class="small-check">
+				        <tr>
+				          <td class="text-center">
+				          	<div class="style-checkbox-sm">
+								<input type="checkbox" id="areaCiencias-1" data-value="1" data-area="1" data-type="asignature">
+								<label for="areaCiencias-1"></label>
+  							</div>
+				          <td>Biología</td>
+				          <td class="num-materia"><input class="cantidad" type="text" name="child-1" value="0"></td>
+				        </tr>
+				        <tr>
+				          <td class="text-center">
+				          	<div class="style-checkbox-sm">
+								<input type="checkbox" id="areaCiencias-2" data-value="2" data-area="1" data-type="asignature">
+								<label for="areaCiencias-2"></label>
+  							</div>
+				          </td>
+				          <td>Ciencia Tecnología y Sociedad</td>
+				          <td class="num-materia"><input class="cantidad" type="text" name="child-1" value="0"></td>
+				        </tr>
+				        <tr>
+				          <td class="text-center">
+				          	<div class="style-checkbox-sm">
+								<input type="checkbox" id="areaCiencias-3" data-value="3" data-area="1" data-type="asignature">
+								<label for="areaCiencias-3"></label>
+  							</div>
+				          </td>
+				          <td>Física</td>
+				          <td class="num-materia"><input class="cantidad" type="text" name="child-1" value="0"></td>
+				        </tr>
+				        <tr>
+				          <td class="text-center">
+				          	 <div class="style-checkbox-sm">
+								<input type="checkbox" id="areaCiencias-5" data-value="4" data-area="1" data-type="asignature">
+								<label for="areaCiencias-5"></label>
+  							</div>
+				          </td>
+				          <td>Química</td>
+				          <td class="num-materia"><input class="cantidad" type="text" name="child-1" value="0"></td>
+				        </tr>
+				      </tbody>
+				    </table>
+				</div>
+	        </div>
+
+	        <div class="col-md-4">
+	        	<div class="well well-icfes altura-asignatura text-left">
+				    <table class="table table-dare">
+				    	<thead>
+							<tr class="tema">
+								<th class="text-center">
+								<div class="style-checkbox">
+									<input type="checkbox" id="area-2" class="select-all" data-id="2" data-type="area">
+									<label for="area-2"></label>
+								</div>
+								</th>
+								<th><h3 class="text-center">Matemáticas</h3></th>
+								<th><input class="cantidad" type="text" value="0" name="parent-2">Cantidad</th>
+							</tr>
+						</thead>
+				      <tbody class="small-check">
+				        <tr>
+				          <td class="text-center">
+				          	<div class="style-checkbox-sm">
+								<input type="checkbox" id="areaMatematicas-1" data-value="5" data-area="2" data-type="asignature">
+								<label for="areaMatematicas-1"></label>
+  							</div>
+				          </td>
+				          <td>Matemática</td>
+				          <td class="num-materia"><input class="cantidad" type="text" value="0" name="child-2"></td>
+				        </tr>
+				        <tr>
+				          <td class="text-center">
+				          	<div class="style-checkbox-sm">
+								<input type="checkbox" id="areaMatematicas-2" data-value="6" data-area="2" data-type="asignature">
+								<label for="areaMatematicas-2"></label>
+  							</div>
+				          </td>
+				          <td>Razonamiento Cuantitativo</td>
+				          <td class="num-materia"><input class="cantidad" type="text" value="0" name="child-2"></td>
+				        </tr>
+				      </tbody>
+				    </table>
+				</div>
+	        </div>
+
+	        <div class="col-md-4">
+	        	<div class="well well-icfes altura-asignatura text-left">
+				    <table class="table table-dare">
+				    	<thead>
+							<tr class="tema">
+								<th class="text-center">
+								<div class="style-checkbox">
+									<input type="checkbox" id="area-3" class="select-all" data-id="3" data-type="area">
+									<label for="area-3"></label>
+								</div>
+								</th>
+								<th><h3 class="text-center">Sociales y Ciudadanas</h3></th>
+								<th><input class="cantidad" type="text" value="0" name="parent-3">Cantidad</th>
+							</tr>
+						</thead>
+				      <tbody class="small-check">
+				        <tr>
+				          <td class="text-center">
+				          	<div class="style-checkbox-sm">
+								<input type="checkbox" id="areaSociales-1" data-value="7" data-area="3" data-type="asignature">
+								<label for="areaSociales-1"></label>
+  							</div>
+				          </td>
+				          <td>Ciencias Sociales</td>
+				          <td class="num-materia"><input class="cantidad" type="text" value="0" name="child-3"></td>
+				        </tr>
+				      </tbody>
+				    </table>
+				</div>
+	        </div>		
+		</div>
+		<div class="asignaturas">
+			<div class="col-md-4">
+	        	<div class="well well-icfes altura-asignatura text-left">
+				    <table class="table table-dare">
+				    	<thead>
+							<tr class="tema">
+								<th class="text-center">
+								<div class="style-checkbox">
+									<input type="checkbox" id="area-4" class="select-all" data-id="4" data-type="area">
+									<label for="area-4"></label>
+								</div>
+								</th>
+								<th><h3 class="text-center">Lectura Crítica</h3></th>
+								<th><input class="cantidad" type="text" value="0" name="parent-4">Cantidad</th>
+							</tr>
+						</thead>
+				      <tbody class="small-check">
+				        <tr>
+				          <td class="text-center">
+				          	<div class="style-checkbox-sm">
+								<input type="checkbox" id="areaLenguaje-1" data-value="8" data-area="4" data-type="asignature">
+								<label for="areaLenguaje-1"></label>
+  							</div>
+				          </td>
+				          <td>Filosofía</td>
+				          <td class="num-materia"><input class="cantidad" type="text" value="0" name="child-4"></td>
+				        </tr>
+				        <tr>
+				          <td class="text-center">
+				          	<div class="style-checkbox-sm">
+								<input type="checkbox" id="areaLenguaje-2" data-value="9" data-area="4" data-type="asignature">
+								<label for="areaLenguaje-2"></label>
+  							</div>
+				          </td>
+				          <td>Lenguaje</td>
+				          <td class="num-materia"><input class="cantidad" type="text" value="0" name="child-4"></td>
+				        </tr>
+				      </tbody>
+				    </table>
+				</div>
+	        </div>	
+			<div class="col-md-4">
+	        	<div class="well well-icfes altura-asignatura text-left">
+				    <table class="table table-dare">
+				    	<thead>
+							<tr class="tema">
+								<th class="text-center">
+								<div class="style-checkbox">
+									<input type="checkbox" id="area-5" class="select-all" data-id="5" data-type="area">
+									<label for="area-5"></label>
+								</div>
+								</th>
+								<th><h3 class="text-center">Inglés</h3></th>
+								<th><input class="cantidad" type="text" value="0" name="parent-5">Cantidad</th>
+							</tr>
+						</thead>
+				      <tbody class="small-check">
+				        <tr>
+				          <td class="text-center">
+				          	<div class="style-checkbox-sm">
+									<input type="checkbox" id="areaIngles-1" data-value="10" data-area="5" data-type="asignature">
+									<label for="areaIngles-1"></label>
+							</div>
+				          </td>
+				          <td>Inglés</td>
+				          <td class="num-materia"><input class="cantidad" type="text" value="0" name="child-5"></td>
+				        </tr>
+				      </tbody>
+				    </table>
+				</div>
+	        </div>
+	        <div class="col-md-4">
+	        	<div class="well well-adicionales altura-asignatura text-left">
+				    <table class="table table-dare-add">
+				    	<thead>
+							<tr class="tema">
+								<th class="text-center">
+								<div class="style-checkbox">
+									<input type="checkbox" id="area-6" class="select-all" data-id="6" data-type="area">
+									<label for="area-6"></label>
+								</div>
+								</th>
+								<th><h3 class="text-center">Asignaturas Adicionales</h3></th>
+								<th><input class="cantidad" type="text" value="0" name="parent-6"><small>Cantidad</small></th>
+							</tr>
+						</thead>
+				      <tbody class="small-check">
+				        <tr id="asignature-new-1" class="new-asignature-group">
+				          <td class="text-center">
+				          	<div class="style-checkbox-sm">
+								<input type="checkbox" id="areaAdd-1" data-value="11" data-area="6" data-type="asignature">
+								<label for="areaAdd-1"></label>
+  							</div>
+				          </td>
+				          <td>Religión</td>
+				          <td class="num-materia"><input class="cantidad" type="text" value="0" name="child-6"></td>
+				        </tr>
+				        <tr id="asignature-new-2" class="new-asignature-group">
+				          <td class="text-center">
+				          	<div class="style-checkbox-sm">
+								<input type="checkbox" id="areaAdd-2" data-value="12" data-area="6" data-type="asignature">
+								<label for="areaAdd-2"></label>
+  							</div>
+				          </td>
+				          <td>Ética y valores</td>
+				          <td class="num-materia"><input class="cantidad" type="text" value="0" name="child-6"></td>
+				        </tr>
+				      </tbody>
+				    </table> 
+				    <a href="#newAsignature" data-toggle="modal" class="btn btn-primary btn-block btn-add-asignature" style="width: 80%; margin: auto;" data-step="14" data-intro="Seleccione este botón para añadir nuevas asignaturas. Recuerde que estas asignaturas deben exstir dentro del banco de preguntas de Helmer Pardo.">Añadir Materias</a>
+				</div>
+	        </div>
+		</div>
+
+
+		<input id="btnPrevious2" type="button" name="previous" class="previous btn btn-lg btn-success btn-next-wizard" value="Ir atrás" />
+		<input id="load-asignatures" type="button" name="next" class="next btn btn-lg btn-success btn-previous-wizard" value="Continuar" data-step="15" data-intro="Este botón permite guardar la parametrización del paso 2 y continuar con el paso 3."/>
+		<footer class="footer-dare text-center">
+			<img src="images/logoFooterNM.png" alt="logo-NM-small">
+		</footer>	          
+	</fieldset>
+	<!-- fieldsets 3 -->
+	<fieldset>
+			<h3 class="visible-xs">Temas</h3>
+			<br class="visible-xs">
+			<p><i>Despliegue los componentes y elige los temas que vas a evaluar.</i></p>
+		<div id="asignatures-content" class="container asignaturas"></div>
+		
+		<div id="tour-step-3" class="hidden">
+				
+			<div class="container-fluid"> 
+							<div class="col-md-4" data-step="17" data-intro="Seleccione los temas a evaluar." data-position="right"> 
+								<div class="well text-left" style="padding:10px;"> 
+									<h3>Biología</h3> 
+
+									<hr> 
+
+									<div class="input-group stylish-input-group" data-step="18" data-intro="Busque de forma rápida los temas de las asignaturas."> 
+										<input type="text" class="form-control" placeholder="Buscar tema"> 
+										<span class="input-group-addon"> 
+											<a type="submit">
+												<i class="fa fa-search"></i>
+											</a> 
+										</span>
+									</div> 
+
+									<hr> 
+
+									<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" data-step="19" data-intro="Despliegue cada componente y active el tema o los temas a evaluar." data-position="right"> 
+
+										<div class="panel panel-default"> 
+
+											<div class="panel-heading" role="tab" id="heading1">
+												<h4 class="panel-title title-coustom">
+													<a data-toggle="collapse" data-parent="#accordion" href="#asignature_1" aria-expanded="true" aria-controls="1">
+														<i class="fa fa-chevron-down visible-xs pull-right"></i>CELULAR
+													</a> 
+												</h4> 
+												<i class="show-theme">Despliegue los temas</i>
+											</div> 
+
+											<div id="asignature_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1"> 
+												<div class="panel-body"> 
+													<table class="table table-striped"> 
+														<tbody> 
+														<tr> 
+															<td>CÉLULAS INMUNITARIAS</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="1"> 
+																	<label for="1"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>DIVISIÓN CELULAR</td> 
+															<td class="tema-check">
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="2"> 
+																	<label for="2"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>ESTRUCTURA CELULAR</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="3"> 
+																	<label for="3"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>FUNCIÓN DE ORGANELOS CITOPLASMÁTICOS</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="4"> 
+																	<label for="4"></label> 
+																</div> 
+															</td> 
+														</tr> 
+													</tbody>
+													</table> 	
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default"> 
+
+											<div class="panel-heading" role="tab" id="heading2"> 
+												<h4 class="panel-title title-coustom"> 
+													<a data-toggle="collapse" data-parent="#accordion" href="#" aria-expanded="true" aria-controls="2">
+														<i class="fa fa-chevron-down visible-xs pull-right"></i>ECOSISTÉMICO
+													</a> 
+												</h4> 
+												<i class="show-theme">Despliegue los temas</i>
+											</div> 
+
+											<div class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2"> 
+												<div class="panel-body"> 
+													<table class="table table-striped"><tbody> 
+														<tr> 
+															<td>DINÁMICA DE ECOSISTEMAS</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="5"> 
+																	<label for="5"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>INTERACCIONES EN UN ECOSISTEMA</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="6"> 
+																	<label for="6"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>ECOLOGÍA</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="7"> 
+																	<label for="7"></label> 
+																</div> 
+															</td> 
+														</tr> 
+													</tbody> 
+												</table> 
+											</div> 
+										</div> 
+									</div> 
+
+									<div class="panel panel-default"> 
+
+										<div class="panel-heading" role="tab" id="heading3"> 
+											<h4 class="panel-title title-coustom"> 
+												<a data-toggle="collapse" data-parent="#accordion" href="#" aria-expanded="true" aria-controls="3">
+													<i class="fa fa-chevron-down visible-xs pull-right"></i>ORGANÍSMICO
+												</a> 
+											</h4> 
+											<i class="show-theme">Despliegue los temas</i> 
+										</div> 
+
+										<div class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3"> 
+											<div class="panel-body"> 
+												<table class="table table-striped"> 
+													<tbody> 
+														<tr> 
+															<td>DINÁMICA POBLACIONAL</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="8"> 
+																	<label for="8"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>ENFERMEDADES RESPIRATORIAS</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="9"> 
+																	<label for="9"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>EVOLUCIÓN</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="10"> 
+																	<label for="10"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>EXCRECIÓN</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="11"> 
+																	<label for="11"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>FUNCIÓN DE LAS MITOCONDRIAS</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="12"> 
+																	<label for="12"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>GENÉTICA EVOLUTIVA</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="13"> 
+																	<label for="13"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>HORMONAS VEGETALES</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="14"> 
+																	<label for="14"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>NUTRICIÓN EN PLANTAS</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="15"> 
+																	<label for="15"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>RESPIRACIÓN CELULAR</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="16"> 
+																	<label for="16"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>RESPIRACIÓN EN PLANTAS</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="17"> 
+																	<label for="17"></label> 
+																</div> 
+															</td> 
+														</tr> 
+														<tr> 
+															<td>DESARROLLO EN VEGETALES</td> 
+															<td class="tema-check"> 
+																<div class="small-check-list"> 
+																	<input type="checkbox" id="18"> 
+																	<label for="18"></label> 
+																</div> 
+															</td> 
+														</tr> 
+													</tbody> 
+												</table> 
+											</div> 
+										</div> 
+									</div> 
+
+								</div> 
+							</div> 
+						</div> 
+					</div>
+				</div>	
+
+
+		<input id="btnPrevious3" type="button" name="previous" class="previous btn btn-lg btn-success btn-previous-wizard" value="Ir atrás" />
+		<input id="btnNext3" type="button" name="next" class="next btn btn-lg btn-success btn-next-wizard" value="Continuar" data-step="20" data-intro="Este botón permite guardar la parametrización del paso 3 y continuar con el paso 4." data-position="top" /> 
+		<footer class="footer-dare text-center">
+			<img src="images/logoFooterNM.png" alt="logo-NM-small">
+		</footer>	          
+	</fieldset>
+	<!-- fieldsets 4 -->
+	<fieldset>
+		<div class="well">
+			<h3 class="visible-xs">Plantillas</h3>
+			<br class="visible-xs">
+			<p><i>Elige una de las siguientes plantillas para la visualización de su evaluación. Recuerde que la opción de “Ver en línea” está seleccionada por defecto.</i></p>
+			<div class="row">
+				<div class="col-md-4 resaltado-blue" data-step="22" data-intro="Escoge una plantilla para definir la diagramación de la evaluación." data-position="top">
+					<img src="images/template-1.png" alt="" class="img-responsive">
+					<div class="text-center templates">
+						<h4>Plantilla 1</h4>
+						<div class="style-checkbox">
+						<input type="checkbox" id="templ-1">
+  						<label for="templ-1"></label>
+  						</div>
+					</div>
+				</div>
+				<div class="col-md-4 resaltado-blue">
+					<img src="images/template-2.png" alt="" class="img-responsive">
+					<div class="text-center templates">
+						<h4>Plantilla 2</h4>
+						<div class="style-checkbox">
+						<input type="checkbox" id="templ-2">
+  						<label for="templ-2"></label>
+  						</div>
+					</div>
+				</div>
+				<div class="col-md-4 resaltado-red" data-step="23" data-intro="Active esta opción para visualizar la evaluación online." data-position="top">
+					<img src="images/template-3.png" alt="" class="img-responsive">
+					<div class="text-center templates">
+						<h4>Versión Online</h4>
+						<div class="style-checkbox">
+						<input type="checkbox" id="templ-3" checked="checked">
+  						<label for="templ-3"></label>
+  						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<input id="btnPrevious4" type="button" name="previous" class="previous btn btn-lg btn-success btn-previous-wizard" value="Ir atrás" />
+		<input id="btnNext4" type="button" name="next" class="next btn btn-lg btn-success btn-next-wizard" value="Continuar" data-step="24" data-intro="Este botón permite guardar la parametrización del paso 4 y continuar con el paso 5." data-position="top" />
+		<footer class="footer-dare text-center">
+			<img src="images/logoFooterNM.png" alt="logo-NM-small">
+		</footer>	  
+	</fieldset>
+	<!-- fieldsets 5 -->
+	<fieldset>
+			<h3 class="visible-xs">Previsualización</h3>
+			<br class="visible-xs">
+			<p><i>Elige la forma de previsualización de su evaluación. Puede generar un documento PDF que se guardará en su equipo o previsualizarlo en el navegador.</i></p>
+
+		<div class="well">
+			<div class="row">
+				<div class="col-xs-6 col-md-6" data-step="26" data-intro="Descargue su cuadernillo (evaluación) en formato PDF." data-position="top">
+					<a href="#" class="icon-red"><i class="fa fa-file-pdf-o fa-5x "></i></a>
+					<br>
+					<a href="files/demo-pdf.pdf" target="_blank" class="btn btn-primary btn-download">Descargar PDF</a>
+				</div> 
+
+				<div class="col-xs-6 col-md-6" data-step="27" data-intro="Genere su evalaución de forma online." data-position="top">
+					<a href="#" class="icon-red"><i class="fa fa-play fa-5x"></i></a>
+					<br>
+					<a data-toggle="modal" href='#modal-id1' class="btn btn-primary btn-download">Ver en línea</a>
+				</div>
+			</div>
+
+		</div>
+		<input id="btnPrevious5" type="button" name="previous" class="previous btn btn-lg btn-success btn-previous-wizard" value="Ir atrás" />
+		<input type="button" name="next" class="finish btn btn-lg btn-success btn-next-wizard" value="Finalizar" data-step="28" data-intro="Seleccione este botón para finalizar el proceso de creación de la evaluación." data-position="top"/>
+		<footer class="footer-dare text-center">
+			<img src="images/logoFooterNM.png" alt="logo-NM-small">
+		</footer>	  
+	</fieldset>
+</div>
+	<!-- Modal 1 -->
+
+				<div class="modal fade" id="modal-id1">
+					<div class="modal-dialog modal-vertical-centered modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title">Pregunta en línea</h4>
+							</div>
+							<div class="modal-body">
+								<!--  
+								<div class="text-center">
+								<img src="images/Pantalla-Quest-GHP.png" class="img-responsive">
+								</div>
+								-->
+								<iframe id="test-online" src="http://app.preparame.co/lms/course/89bcf824/module/56/content/16/sit/" frameborder="0" width="100%" height="450"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+
+	<!-- Modal 2 -->
+
+				<div class="modal fade" id="newAsignature">
+					<div class="modal-dialog modal-vertical-centered modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h3 class="modal-title">Añadir nueva asignatura</h3>
+							</div>
+							<div class="modal-body">
+								<ul class="list-unstyled list-newAsignature">
+									<li>
+										<div class="input-addNew-asignature">
+											<input type="checkbox" id="asignature-new1">
+											<label for="asignature-new1"></label>
+										</div>
+										<div class="text-newAsignature">
+											<h4>Religión</h4>
+										</div>
+									</li>
+
+									<li>
+										<div class="input-addNew-asignature">
+											<input type="checkbox" id="asignature-new2">
+											<label for="asignature-new2"></label>
+										</div>
+										<div class="text-newAsignature">
+											<h4>Ética y valores</h4>
+										</div>
+									</li>
+
+									<li>
+										<div class="input-addNew-asignature">
+											<input type="checkbox" id="asignature-new3">
+											<label for="asignature-new3"></label>
+										</div>
+										<div class="text-newAsignature">
+											<h4>Informática</h4>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>	
+</div>							
+
+
+
+	<!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<!-- jQuery easing plugin -->
+	<script src="js/jquery.easing.min.js" type="text/javascript"></script>
+
+	<!-- Wizard progress -->
+	<script src="js/wizard.js"></script>
+	<!-- DB -->
+	<script src="js/DB.js"></script>
+
+	<!-- IntroJS -->
+	<script type="text/javascript" src="js/intro.js"></script>
+
+	<script>
+		var temas= [];
+
+
+		// scale calification
+
+
+		$("#select-calification").change(function(){
+			var  valueSelect = $(this).val(),
+				 rank = $("#select-rank");
+
+			var notes = [];	 
+
+			if(valueSelect == 0){
+				$("#select-rank option:not(.label-selected)").remove();
+				var arregloCuali = [ ["A-B-C-D-E"],["E-S-A-I"] ];
+				notes = arregloCuali;
+			}
+			else{
+				$("#select-rank option:not(.label-selected)").remove();
+				var arregloCuanti = [ ["0 - 500 SABER 2014 (PONDERADO)"],["0 a 5"], ["0 a 10"], ["0 a 100"] ];
+				notes = arregloCuanti;
+
+			} 
+
+			for(i=0; i< notes.length;i++) 
+					$(rank).append("<option>" + notes[i] + "</option>");
+
+		});
+
+		// end  scale calification	
+
+
+
+
+
+	</script>
+
+	<script id="some-template" type="text/x-handlebars-template">
+		<div class="row">
+		{{#each []}} 
+		<div class="col-md-4">
+			<div class="well text-left" style="padding:10px;">
+
+				<h3>{{name}}</h3>
+				<hr>
+
+				<div class="input-group stylish-input-group">
+					<input type="text" class="form-control"  placeholder="Buscar tema" >
+					<span class="input-group-addon">
+						<a type="submit"><i class="fa fa-search"></i></a>  
+					</span>
+				</div>
+				<hr>
+
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					{{#each components}}
+						<div class="panel panel-default">
+
+							<div class="panel-heading" role="tab" id="heading{{id}}">
+								<h4 class="panel-title title-coustom">
+									<a data-toggle="collapse" data-parent="#accordion" href="#asignature{{id}}" aria-expanded="true" aria-controls="{{id}}"><i class="fa fa-chevron-down visible-xs pull-right"></i>{{ name }}</a>
+								</h4>
+								<i class="show-theme">Despliegue los temas</i>
+							</div>
+
+							<div id="asignature{{id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{id}}">
+								<div class="panel-body">
+
+									<table class="table table-striped">
+										<tbody>
+										    {{#each topics}}
+											<tr>
+												<td>{{ topic.name }}</td>
+												<td class="tema-check">
+													<div class="small-check-list">
+														<input type="checkbox" id="{{topic.id}}">
+														<label for="{{topic.id}}"></label>
+													</div>
+												</td>
+											</tr>
+											{{/each}}
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+						</div>
+					{{/each}}
+				</div>
+	
+			</div>  		
+		</div>
+		{{/each}}  
+		</div>		
+	</script>
+
+
+	<script>
+
+			$(".new-asignature-group").hide();
+
+
+			function search_asignature(value) {
+				for (var i = 0; i < temas.length; i++) {
+					if (temas[i].asignature == value) {
+						return true;
+					};
+				};
+				return false;
+			}
+
+			function get_asignature(value){
+
+				for(var i = 0; i < asignatures_data.asignatures.length; i++){
+					if (asignatures_data.asignatures[i].asignature.id == value) {
+						return asignatures_data.asignatures[i].asignature;
+					};
+				}
+			}
+
+			function drop_element (value) {
+
+				var pos = null;
+				for (var i = 0; i < temas.length; i++) {
+					if(temas[i].asignature == value){
+						pos = i;
+					}
+
+				};
+				var new_length = temas.length - 1;
+				var j = 0;
+				var new_array = [];
+				for(var i = 0; i < temas.length; i++){
+					if (i != pos) {
+						new_array[j] = temas[i];
+						j++;
+					}
+
+				}
+				temas = new_array;
+
+			}
+
+			function add_element (element) {
+				if (!search_asignature($(element).data("value"))) {
+
+					temas.push({
+						"area":$(element).data("area"), 
+						"asignature":$(element).data("value"),
+						"name":get_asignature($(element).data("value")).name,
+						"components": get_components($(element).data("value"))
+
+					});
+
+				}else{
+					var value = $(element).data("value");
+					drop_element(value);
+				}
+			}
+
+			function get_components(asignature) {
+				var array = []
+
+
+				for (var i = 0; i < components_data.components.length; i++) {
+
+					if (components_data.components[i].component.asignature_id == asignature) {
+						array.push(components_data.components[i].component);
+					};
+				};
+
+				return array;
+			}
+
+
+			$("input:checkbox").change(function(){
+				if ($(this).data("type") == "asignature") {
+					if (!$(this).is(":checked")) {
+						var area = $(this).data("area");
+						var checked = $("input:checkbox[data-id="+area+"]");
+						if($($("input:checkbox[data-id="+area+"]")[0]).is(":checked")){
+							$($("input:checkbox[data-id="+area+"]")[0]).prop("checked", false);
+						}
+					}
+					var element = $(this);
+					add_element(element);
+
+				};
+
+				if ($(this).data("type") == "area") {
+					var area_id = $(this).data("id");
+					var asignatures_selected = $("input:checkbox[data-area="+area_id+"]");
+					if (!$(this).is(":checked")) {
+						for (var i = 0; i < asignatures_selected.length; i++) {
+							asignature_selected = asignatures_selected[i];
+							var value = $(asignature_selected).data("value");
+							drop_element($(asignature_selected).data("value"));
+						}	
+					}
+					else{
+
+						for (var i = 0; i < asignatures_selected.length; i++) {
+							asignature_selected = asignatures_selected[i];
+							var value = $(asignature_selected).data("value");
+							add_element($(asignature_selected));
+						}
+
+					}
+				}
+			});
+
+
+
+		$("#load-asignatures").click(function(){
+			$("#asignatures-content").html("");
+			var source = $("#some-template").html(); 
+			var template = Handlebars.compile(source);
+			var limit = Math.ceil(temas.length / 2);
+			var pos = 0;
+			for(var i = 0; i < limit; i++){
+				var new_temas = [];
+				if (pos < temas.length) {
+					new_temas[0] = temas[pos];
+					pos++;
+				}
+				if (pos < temas.length) {
+					new_temas[1] = temas[pos];
+					pos++;
+				}
+				if (pos < temas.length) {
+					new_temas[2] = temas[pos];
+					pos++;
+				}
+
+
+
+				$('#asignatures-content').append(template(new_temas));
+
+
+			}
+
+		});
+
+		$("input[name='parent-1']").keyup(function(){
+			var value = $("input[name='parent-1']").val();
+			$("input[name='child-1']").val(value);
+		});
+
+		$("input[name='parent-2']").keyup(function(){
+			var value = $("input[name='parent-2']").val();
+			$("input[name='child-2']").val(value);
+
+		});
+
+		$("input[name='parent-3']").keyup(function(){
+			var value = $("input[name='parent-3']").val();
+			$("input[name='child-3']").val(value);
+
+		});
+
+		$("input[name='parent-4']").keyup(function(){
+			var value = $("input[name='parent-4']").val();
+			$("input[name='child-4']").val(value);
+
+		});
+
+		$("input[name='parent-5']").keyup(function(){
+			var value = $("input[name='parent-5']").val();
+			$("input[name='child-5']").val(value);
+		});	
+
+		$("input[name='parent-6']").keyup(function(){
+			var value = $("input[name='parent-6']").val();
+			$("input[name='child-6']").val(value);
+
+		});	
+		$("#asignature-new1").change(function(){
+			if($(this).is(":checked")){
+				$("#asignature-new-1").show();	
+			}
+		});
+
+		$("#asignature-new2").change(function(){
+			if($(this).is(":checked")){
+				$("#asignature-new-2").show();	
+			}
+		});
+
+			$("#btnNext1").click(function(){
+				$("#btnTour").hide();
+			});
+
+			$("#btnPrevious2").click(function(){
+				$("#btnTour").show();
+			});
+
+			$('.guided-tour').click(function() {
+
+				var introguide = introJs(); 
+
+				introguide.setOptions({
+					"nextLabel": "Siguiente",
+					"prevLabel": "Anterior",
+					"skipLabel": "Saltar",
+					"doneLabel": "Terminar"
+				});
+
+				introguide.start();
+
+				$(".introjs-bullets").hide();
+
+				var counter = 0;	
+
+				$(".introjs-nextbutton").click(function(){
+					counter ++;
+					//console.log(counter);
+					if (counter == 9) {
+
+						$("#btnNext1").click();
+						$("#btnTour").hide();
+					}
+
+					if (counter == 15){
+
+						$("#load-asignatures").click();
+						//console.log("test");
+						$("#tour-step-3").removeClass("hidden");
+
+					}
+
+					if (counter == 18){
+						$("#asignature_1").addClass("in");	
+					}
+
+					if (counter == 20){
+						$("#btnNext3").click();
+
+					}
+
+
+					if (counter == 24){
+						$("#btnNext4").click();
+
+					}
+
+					if (counter == 9 || counter == 15 || counter == 20 || counter == 24 ) {
+
+						$(".introjs-prevbutton").hide();
+					}
+
+					if (counter == 10 || counter == 16 || counter == 21 || counter == 25){
+
+						$(".introjs-prevbutton").show();
+					}
+
+					if (counter == 27){
+						$(".introjs-nextbutton").hide();
+					}
+
+				});
+
+
+				$(".introjs-prevbutton").click(function(){
+					counter --;
+					//console.log(counter);
+
+
+					if (counter == 9 || counter == 15 || counter == 20 || counter == 24){
+						$(".introjs-prevbutton").hide();
+					}
+
+					if(counter == 26){
+						$(".introjs-nextbutton").show();
+					}
+
+				});
+
+
+				$(".introjs-skipbutton").click(function(){
+					 location.reload();	
+				});
+
+				});
+
+
+	</script>
+
+
+</body>
+</html>

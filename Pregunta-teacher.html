@@ -1,0 +1,209 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>DARE - Wizard</title>
+	<!-- IntroJS -->
+	<link href="css/introjs.css" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom Fonts -->
+    <link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- CSS -->
+	<link href="css/hover.css" rel="stylesheet" media="all">		
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/wizard.css">
+
+<body style="background: linear-gradient(#D5D2D2, #F2EFEF);">
+	
+	<!-- navbar principal -->
+			<nav class="navbar navbar-default" role="navigation">
+			<div class="row-fluid">
+				<div class="col-md-6">
+					<div class="navbar-header">
+						<div id="logo" class="pull-left">
+							<img src="images/logo.png" alt="" class="img-responsive">
+						</div>
+					</div>
+					<div id="info-navbar" class="hidden-xs">
+						<i>D.A.R.E.<br>Diagnóstico de Alto Rendimiento & Entrenamiento.</i>
+					</div>	
+				</div>
+				<div class="col-md-3">
+					<div class="row">
+					<div class="col-xs-4 col-md-2 logoSchool">
+						<img src="images/colegioDefault.png" alt="colegio">
+					</div>
+					<div class="col-xs-8 col-md-10 nameSchool">Colegio Santiago Apóstol</div>
+				</div>	
+				</div>
+				<div class="col-md-3">
+					<div class="row teacher-style">
+					<div class="col-xs-4 col-md-4 text-center image-user">
+						<img src="images/avatar-profe.png" alt="avatar"  class="img-circle avatar-default">
+					</div>
+					<div class="col-xs-5 col-md-5 text-center name-user">
+						<span>Victor Montoya</span>
+					</div>
+					<div class="col-xs-3 col-md-3 text-center sing-out">
+						<a href="/" class="grow"><i class="fa fa-sign-in fa-2x"></i></a>
+					</div>
+				</div>	
+				</div>	
+			</div>
+			</nav>
+	<!-- End navbar principal -->
+
+	<div class="box-heading">
+		<div class="col-md-1 btn_back">
+			<a href="home-teacher.html" class="btn hidden-xs btn-toggle btn-back-teacher" id="menu-toggle">
+				<i class="fa fa-arrow-left fa-3x"></i>
+			</a>
+		</div>
+
+		<div class="col-md-9">
+			<h3 class="text-center">Reportes</h3>	
+		</div>
+
+		<div class="col-md-2 pull-right text-center hidden-xs">
+			<a href="#" class="btn btn-tour-custom guided-tour"><i class="fa fa-binoculars"></i></a>
+			<br>
+			<span>Visita Guiada</span>
+		</div> 
+
+	</div>
+
+	<div class="clearfix"></div>
+
+<div class="container">
+	<div class="well">
+				<h3 class="title-reporte">Creación de Preguntas</h3>
+
+		<form class="form-horizontal" role="form">
+			  <div class="form-group" data-step="1" data-intro="Escriba el titulo de la pregunta" data-position="top">
+			    <label for="title" class="col-sm-2 control-label">Titulo:</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" id="title" placeholder="Escriba el titulo de la pregunta">
+			    </div>
+			  </div>
+
+			  <div class="form-group" data-step="2" data-intro="Escriba el enunciado de la pregunta" data-position="top">
+			    <label for="question" class="col-sm-2 control-label">Enunciado:</label>
+			    <div class="col-sm-10">
+			       <textarea rows="4" cols="50"type="text" class="form-control" id="title" placeholder="Escriba el Enunciado de la pregunta"></textarea>
+			    </div>
+			  </div>
+
+			  <div class="clearfix"></div>
+
+			  	<div class="row" data-step="3" data-intro="Cargue una imagen de formato jpg desde su computadora" data-position="top">
+			  		<div class="col-md-offset-2 col-md-4">
+			  			<div tabindex="-1" class="form-control" title="Ruta de imagen"></div>
+			  		</div>
+			  		<div class="col-md-3 btn-upload-question">
+			  			<button type="submit" class="btn btn-success btn-block"><i class="fa fa-cloud-upload fa-fw"></i>Cargar imagen</button>
+			  		</div>
+			  		<div class="col-md-3 btn-choose-question">
+				    	<a href="#" class="col-md-3 btn btn-primary btn-block"><i class="fa fa-folder-open fa-fw"></i>Buscar imagen</a>
+			  		</div>		  		
+			  	</div>
+			  		
+			  <hr>
+			  <div data-step="4" data-intro="Escribe las opciones de las preguntas y marca las correcta" data-position="top">
+			  <div class="form-group">
+			    <label for="option-1" class="col-sm-2 control-label">Opción A:</label>
+			    <div class="col-sm-8">
+			      <input type="text" class="form-control" id="option-1" placeholder="Escriba la opción A">
+			    </div>
+			    <div class="style-checkbox col-sm-2">
+					<input type="checkbox" id="aswer-1">
+					<label for="aswer-1"></label>
+				</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="option-2" class="col-sm-2 control-label">Opción B:</label>
+			    <div class="col-sm-8">
+			      <input type="text" class="form-control" id="option-2" placeholder="Escriba la opción B">
+			    </div>
+			    <div class="style-checkbox col-sm-2">
+					<input type="checkbox" id="aswer-2">
+					<label for="aswer-2"></label>
+				</div>
+			  </div>
+
+			   <div class="form-group">
+			    <label for="option-3" class="col-sm-2 control-label">Opción C:</label>
+			    <div class="col-sm-8">
+			      <input type="text" class="form-control" id="option-3" placeholder="Escriba la opción C">
+			    </div>
+			    <div class="style-checkbox col-sm-2">
+					<input type="checkbox" id="aswer-3">
+					<label for="aswer-3"></label>
+				</div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="option-4" class="col-sm-2 control-label">Opción D:</label>
+			    <div class="col-sm-8">
+			      <input type="text" class="form-control" id="option-4" placeholder="Escriba la opción D">
+			    </div>
+			    <div class="style-checkbox col-sm-2">
+					<input type="checkbox" id="aswer-4">
+					<label for="aswer-4"></label>
+				</div>
+			  </div>
+			  </div>
+				
+			<div class="text-center" data-step="5" data-intro="Envíe la pregunta para que el grupo educativo Helmer Pardo la revise y la tenga en cuenta en su banco de pregunta, si la pregunta es seleccionada como validad el autor recibirá beneficios económicos por contribuir con el crecimiento del banco de preguntas." data-position="top">
+			  <a href="#" class="btn btn-success">Enviar Pregunta</a>
+			</div>	
+		</form>
+
+	</div>		
+</div>
+</div>
+<!-- Menu for devices-->	
+		<div id="menu-small" class="row visible-xs">
+			<div class="text-center panel-yellow">
+				<a href="home-teacher.html" class="btn-back-teacher">
+					<i class="fa fa-arrow-left fa-3x fa-fw style-menu-small"></i>
+					<span>Ir Atras</span>
+				</a>
+			</div>
+		</div>
+<!-- End Menu for devices-->
+<footer class="footer-dare text-center">
+	<img src="images/logoFooterNM.png" alt="logo-NM-small">
+</footer>
+
+
+
+
+	<!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<!-- IntroJS -->
+	<script type="text/javascript" src="js/intro.js"></script>
+
+	<script>
+		$('.collapse').collapse();
+
+		$('.guided-tour').click(function() {
+			var introguide = introJs(); 
+			introguide.setOptions({
+				"nextLabel": "Siguiente",
+				"prevLabel": "Anterior",
+				"skipLabel": "Saltar",
+				"doneLabel": "Terminar"
+			});
+			introguide.start();
+		});
+
+	</script>
+
+</body>
+</html>

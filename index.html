@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>DARE - Login</title>
+			<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		    <!-- Custom Fonts -->
+    	<link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+			<!-- CSS -->
+		<link rel="stylesheet" href="css/custom.css">
+
+		<script src="js/login.js"></script> 
+
+
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<div id="logo" class="pull-left">
+						<img src="images/logo.png" alt="" class="img-responsive">
+					</div>
+				</div>
+				<div id="info-navbar"><i></i></div>
+			</div>
+		</nav>
+
+<div id="bg-login" class="container vertical-offset">
+			
+		<!-- Title Login -->
+
+			<div class="text-center">
+				<h2 class="h2-login">D.A.R.E.<br>Diagnóstico de Alto Rendimiento & Entrenamiento</h2>	
+				<i class="fa fa-caret-up arrow-up text-center"></i>
+			</div> 
+
+		<!-- Box Login -->
+			
+			<div class="row well well-login">
+				<form id="box-login"class="col-md-4 col-md-offset-1" role="form">
+
+					<!-- Box sing -->
+					
+					<div class="well well-HelmerP">
+						<div id="user" class="form-group">
+							<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-user"></i></span>
+							<input type="text" data-toggle="tooltip" class="form-control" id="username" placeholder="Usuario" title="Ingrese su Usuario" name="username">
+							</div>
+							<div id="alert-user" style="display: none;" class="alert alert-danger" role="alert">Ingrese un usuario válido</div>
+						</div>
+						<div id="key" class="form-group">
+							<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-key"></i></span>	
+							<input type="password" data-toggle="tooltip" class="form-control" id="password" placeholder="Contraseña" title="Ingrese su Contraseña" name="password">
+							</div>
+							<div id="alert-password" style="display: none;" class="alert alert-danger" role="alert">Ingrese una contraseña válida</div>
+						</div>
+						<input type="button" value="Ingresar" id="submit" onclick="validate()" class="btn btn-primary btn-block">
+					</div>
+
+					<!-- Box sing social Network-->
+
+					<div class="login-network">
+						<hr class="hrOr">
+						<span class="spanOr">Ó ingresa a través de:</span>
+
+						<div class="row SocialButtons">
+							<div class="col-md-4">
+						        <a href="#" class="btn btn-block btn-facebook">
+							        <i class="fa fa-facebook visible-xs"></i>
+							        <span class="hidden-xs">Facebook</span>
+						        </a>
+							</div>
+
+							<div class="col-md-4">
+						        <a href="#" class="btn btn-block btn-twitter">
+							        <i class="fa fa-twitter visible-xs"></i>
+							        <span class="hidden-xs">Twitter</span>
+						        </a>
+					        </div>
+							
+							<div class="col-md-4">
+						        <a href="#" class="btn btn-block btn-google">
+							        <i class="fa fa-google-plus visible-xs"></i>
+							        <span class="hidden-xs">Google+</span>
+						        </a>
+					        </div>
+						</div>
+
+						<div class="row-fluid option-login">
+							<div class="col-md-6">
+								<label class="checkbox">
+									<input type="checkbox" value="remember-me">Recordar usuario
+								</label>
+							</div>
+							<div class="col-md-6">
+								<a href="#">¿Olvidó su contraseña?</a>
+							</div>
+						</div>	
+					</div>	
+			</form>	
+
+			<div class="col-md-7 text-center">
+				<a href="http://www.rcnradio.com/noticias/en-2015-las-pruebas-del-icfes-seran-por-computador-172154" target="_blank">
+					<img src="images/slide.jpg" class="img-responsive center-custom" alt="">
+				</a>
+			</div>
+
+		</div>
+
+
+		<div class="row well well-info-landing">
+			<div class="col-md-4 text-center">
+				<div class="well well-landing">
+					<div id="search-icon">
+						<i class="fa fa-search"></i>
+					</div>
+					<h3>¿Qué significa D.A.R.E y qué es?</h3>
+					<p>El nuevo Diagnóstico de Alto Rendimiento & Entrenamiento de los mejores, para los mejores</p>
+				</div>
+			</div>
+			<div class="col-md-4 text-center">
+				<div class="well well-landing">
+					<div id="bar-icon">
+					<i class="fa fa-bar-chart"></i>
+					</div>
+					<h3>¿Cuántos reportes genera  D.A.R.E?</h3>
+					<p>D.A.R.E.  ofrece una variedad de reportes: desde reportes individuales hasta los Reportes por grupos.</p>
+				</div>
+			</div>
+			<div class="col-md-4 text-center">
+				<div class="well well-landing">
+					<div id="file-icon">
+					<div class="text-center">
+	                	<i class="fa fa-file-text-o"></i>
+	                </div>
+	                </div>			
+					<h3>¿Qué funcionalidades tiene D.A.R.E?</h3>
+					<p>Evaluaciones personalizadas para cada institución dependiendo de sus necesidades</p>
+				</div>
+		</div>
+</div>
+<div class="clearfix"></div>
+<footer class="row footer-dare text-center">
+	<img src="images/logoFooterNM.png" alt="logo-NM-small">
+</footer>
+
+
+	  <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	</body>
+	<script type="text/javascript">
+
+		$('input[type=text][name=username]').tooltip({
+    	placement: "top",
+    	animated: 'fade',
+    	trigger: "focus"
+		});
+
+		$('input[type=password][name=password]').tooltip({
+    	placement: "top",
+    	animated: 'fade',
+    	trigger: "focus"
+		}); 
+
+	</script>
+</html>

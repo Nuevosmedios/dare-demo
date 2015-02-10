@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>DARE - Lista de Evaluaciones</title>
+	<!-- IntroJS -->
+	<link href="css/introjs.css" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom Fonts -->
+    <link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- CSS -->
+	<link href="css/hover.css" rel="stylesheet" media="all">		
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/wizard.css">
+
+	<body style="background: linear-gradient(#D5D2D2, #F2EFEF); position: absolute;width: 100%; min-height: 100%;">
+
+		<!-- navbar principal -->
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="row-fluid">
+				<div class="col-md-6">
+					<div class="navbar-header">
+						<div id="logo" class="pull-left">
+							<img src="images/logo.png" alt="" class="img-responsive">
+						</div>
+					</div>
+					<div id="info-navbar" class="hidden-xs">
+						<i>D.A.R.E.<br>Diagnóstico de Alto Rendimiento & Entrenamiento.</i>
+					</div>	
+				</div>
+				<div class="col-md-3">
+					<div class="row">
+						<div class="col-xs-4 col-md-2 logoSchool">
+							<img src="images/colegioDefault.png" alt="colegio">
+						</div>
+						<div class="col-xs-8 col-md-10 nameSchool">Colegio Santiago Apóstol</div>
+					</div>	
+				</div>
+				<div class="col-md-3">
+					<div class="row teacher-style">
+						<div class="col-xs-4 col-md-4 text-center image-user">
+							<img src="images/avatar-profe.png" alt="avatar"  class="img-circle avatar-default">
+						</div>
+						<div class="col-xs-5 col-md-5 text-center name-user">
+							<span>Victor Montoya</span>
+						</div>
+						<div class="col-xs-3 col-md-3 text-center sing-out">
+							<a href="/" class="grow"><i class="fa fa-sign-in fa-2x"></i></a>
+						</div>
+					</div>	
+				</div>	
+			</div>
+		</nav>
+		<!-- End navbar principal -->
+
+		<!-- Menu for devices-->	
+		<nav id="toggle-nav" class="navbar-default navbar-fixed-bottom visible-xs" role="navigation">
+			<div id="menu-small" class="row">
+				<div class="text-center panel-blue">
+					<a href="home-teacher.html" class="btn-back-teacher">
+						<i class="fa fa-arrow-left fa-3x fa-fw style-menu-small"></i>
+						<span>Ir Atras</span>
+					</a>
+				</div>
+			</div>
+		</nav>
+		<!-- End Menu for devices-->	
+
+		<div class="box-heading">
+			<div class="col-md-1 btn_back">
+				<a href="home-teacher.html" class="btn hidden-xs btn-toggle btn-back-teacher" id="menu-toggle">
+					<i class="fa fa-arrow-left fa-3x"></i>
+				</a>
+			</div>
+
+			<div class="col-md-9">
+				<h3 class="text-center">Mis Evaluaciones</h3>	
+			</div>
+
+			<div class="col-md-2 pull-right text-center hidden-xs">
+				<a href="#" class="btn btn-tour-custom guided-tour"><i class="fa fa-binoculars"></i></a>
+				<br>
+				<span>Visita Guiada</span>
+			</div> 
+		</div>
+
+		<div class="clearfix"></div>
+
+		<div id="mis-evaluaciones" class="container">
+
+			<div class="search-evaluation" data-step="1" data-intro="Busca de forma rápida y directa una evaluación.">
+				<span>Buscar evaluación:</span>
+				<div class="col-md-4 input-group custom-search-form">
+					<input type="text" class="form-control">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">
+							<i class="fa fa-search"></i>
+						</button>
+					</span>
+				</div>
+			</div>
+
+				<div class="method">
+					<div class="row margin-0 list-header hidden-sm hidden-xs">
+						<div class="col-md-2"><div class="header text-center">Grado / Périodo</div></div>
+						<div class="col-md-1"><div class="header text-center">ID</div></div>
+						<div class="col-md-9"><div class="header text-center">Información General</div></div>
+					</div>
+
+					<!-- row 1 -->
+
+					<div class="row margin-0 equal-height only-mobile" data-step="2" data-intro="Revisa cada una de las evaluaciones creadas y sus detalles." data-position="top">
+						<div class="col-xs-9 col-md-2 term-evaluation">
+							<div class="cell">
+								<div class="propertyname">
+									10° Periodo IV
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-1 text-center id-evaluation">
+							<div class="cell">
+								<div class="type">
+									<code>766</code>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-9 information-evaluation">
+							<div class="cell">
+								<div class="items col-sm-8 height-100" data-step="3" data-intro="Conoce la información general que contiene cada evaluación: descripción de examen, cantidad de asignaturas y el número total de preguntas.">
+									<ul class="list-unstyled">
+										<li>
+											<h4><strong>Evaluación de área Ciencias Naturales</strong>
+												<div id="btn-edit" class="btn-group" data-step="4" data-intro="Este botón despliega un panel con las opcines de edición de la evaluación." data-position="right">
+													<button type="button" class="btn btn-xs btn-primary dropdown-toggle btn-edit-evaluation" data-toggle="dropdown">
+														<i class="fa fa-pencil fa-fw fa-2x"></i>
+													</button>
+													<ul id="list-edit" class="dropdown-menu" role="menu">
+														<li data-step="5" data-intro="Esta opción dirige a la pantalla de creación de evalauciones; donde podrá modificar la evaluación." data-position="right"><a href="wizard.html">Editar Evaluación</a></li>
+														<li data-step="6" data-intro="Esta opción permite crear una copia de la evaluación." data-position="right"><a href="wizard.html">Hacer copia de evaluación</a></li>
+														<li data-step="7" data-intro="Esta opción deja de mostrar la evaluación dentro del listado de evaluaciones y permite guardar una copia como histórico de la evaluación." data-position="right"><a href="#">Archivar Evaluación</a></li>
+														<li data-step="8" data-intro="Esta opción permite generar nuevamente la evaluación en formato PDF para ser descargado." data-position="right"><a href="#">Generar Cuadernillo</a></li>
+													</ul>
+												</div>
+											</h4>
+										</li>
+										<li><span>Tipo de Examen:</span><span class="mg-custom-left"><strong>Evaluación Periodica</strong></span></li>
+										<li><span>Fecha de Creación:</span><span class="mg-custom-left"><strong>11/12/14</strong></span></li>
+										<li>
+											<span><strong>Materias/Preguntas:</strong></span>
+											<ul class="list-unstyled list-inline">
+												<li>
+													<div class="panel status panel-success">
+														<div class="panel-heading headingAsignature-custom">
+															<h3 class="panel-title text-center">5</h3>
+														</div>
+														<div class="panel-body text-center bodyAsignature-custom">Biología
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="panel status panel-success">
+														<div class="panel-heading headingAsignature-custom">
+															<h3 class="panel-title text-center">10</h3>
+														</div>
+														<div class="panel-body text-center bodyAsignature-custom">Química
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="panel status panel-success">
+														<div class="panel-heading headingAsignature-custom">
+															<h3 class="panel-title text-center">12</h3>
+														</div>
+														<div class="panel-body text-center bodyAsignature-custom">Física
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+
+								<div class="col-xs-6 col-sm-2 text-center height-100 column-custom">
+									<span><strong>27 de 27</strong><br>preguntas</span>
+								</div>
+
+								<div class="col-sm-2 text-center height-100 column-custom">
+									<span><strong>3</strong><br>Materias</span>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+
+					<!-- row 2 -->
+
+					<div class="row margin-0 equal-height only-mobile">
+						<div class="col-xs-9 col-md-2 term-evaluation">
+							<div class="cell">
+								<div class="propertyname">
+									11° Periodo I
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-1 text-center id-evaluation">
+							<div class="cell">
+								<div class="type">
+									<code>767</code>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-9 information-evaluation">
+							<div class="cell">
+								<div class="items col-sm-8 height-100">
+									<ul class="list-unstyled">
+										<li>
+											<h4><strong>Evaluación de Refuerzo de Périodo</strong>
+												<div class="btn-group">
+													<button type="button" class="btn btn-xs btn-primary dropdown-toggle btn-edit-evaluation" data-toggle="dropdown">
+														<i class="fa fa-pencil fa-fw fa-2x"></i>
+													</button>
+													<ul class="dropdown-menu" role="menu">
+														<li><a href="wizard.html">Editar Evaluación</a></li>
+														<li><a href="wizard.html">Hacer copia de evaluación</a></li>
+														<li><a href="#">Archivar Evaluación</a></li>
+														<li><a href="#">Generar Cuadernillo</a></li>
+													</ul>
+												</div>
+											</h4>
+										</li>
+										<li><span>Tipo de Examen:</span><span class="mg-custom-left"><strong>Quiz</strong></span></li>
+										<li><span>Fecha de Creación:</span><span class="mg-custom-left"><strong>15/12/14</strong></span></li>
+										<li>
+											<span><strong>Materias/Preguntas:</strong></span>
+											<ul class="list-unstyled list-inline">
+												<li>
+													<div class="panel status panel-success">
+														<div class="panel-heading headingAsignature-custom">
+															<h3 class="panel-title text-center">5</h3>
+														</div>
+														<div class="panel-body text-center bodyAsignature-custom">Biología
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+
+								<div class="col-xs-6 col-sm-2 text-center height-100 column-custom">
+									<span><strong>5 de 5</strong><br>preguntas</span>
+								</div>
+
+								<div class="col-sm-2 text-center height-100 column-custom">
+									<span><strong>1</strong><br>Materia</span>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+
+					<!-- row 3 -->
+
+					<div class="row margin-0 equal-height only-mobile">
+						<div class="col-xs-9 col-md-2 term-evaluation">
+							<div class="cell">
+								<div class="propertyname">
+									11° Periodo IV
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-3 col-md-1 text-center id-evaluation">
+							<div class="cell">
+								<div class="type">
+									<code>768</code>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-9 information-evaluation">
+							<div class="cell">
+								<div class="items col-sm-8 height-100">
+									<ul class="list-unstyled">
+										<li>
+											<h4><strong>Pre - SABER para el grado 11</strong>
+												<div class="btn-group">
+													<button type="button" class="btn btn-xs btn-primary dropdown-toggle btn-edit-evaluation" data-toggle="dropdown">
+														<i class="fa fa-pencil fa-fw fa-2x"></i>
+													</button>
+													<ul class="dropdown-menu" role="menu">
+														<li><a href="wizard.html">Editar Evaluación</a></li>
+														<li><a href="wizard.html">Hacer copia de evaluación</a></li>
+														<li><a href="#">Archivar Evaluación</a></li>
+														<li><a href="#">Generar Cuadernillo</a></li>
+													</ul>
+												</div>
+											</h4>
+										</li>
+										<li><span>Tipo de Examen:</span><span class="mg-custom-left"><strong>Pre - SABER</strong></span></li>
+										<li><span>Fecha de Creación:</span><span class="mg-custom-left"><strong>21/12/14</strong></span></li>
+										<li>
+											<span><strong>Materias/Preguntas:</strong></span>
+											<ul class="list-unstyled list-inline">
+												<li>
+													<div class="panel status panel-success">
+														<div class="panel-heading headingAsignature-custom">
+															<h3 class="panel-title text-center">10</h3>
+														</div>
+														<div class="panel-body text-center bodyAsignature-custom">Biología
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="panel status panel-success">
+														<div class="panel-heading headingAsignature-custom">
+															<h3 class="panel-title text-center">10</h3>
+														</div>
+														<div class="panel-body text-center bodyAsignature-custom">Matemáticas
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="panel status panel-success">
+														<div class="panel-heading headingAsignature-custom">
+															<h3 class="panel-title text-center">10</h3>
+														</div>
+														<div class="panel-body text-center bodyAsignature-custom">Filosofía
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="panel status panel-success">
+														<div class="panel-heading headingAsignature-custom">
+															<h3 class="panel-title text-center">10</h3>
+														</div>
+														<div class="panel-body text-center bodyAsignature-custom">Ingles
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="panel status panel-success">
+														<div class="panel-heading headingAsignature-custom">
+															<h3 class="panel-title text-center">10</h3>
+														</div>
+														<div class="panel-body text-center bodyAsignature-custom">Química
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="panel status panel-success">
+														<div class="panel-heading headingAsignature-custom">
+															<h3 class="panel-title text-center">10</h3>
+														</div>
+														<div class="panel-body text-center bodyAsignature-custom">Física
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+
+								<div class="col-xs-6 col-sm-2 text-center height-100 column-custom">
+									<span><strong>60 de 60</strong><br>preguntas</span>
+								</div>
+
+								<div class="col-sm-2 text-center height-100 column-custom">
+									<span><strong>6</strong><br>Materias</span>
+								</div>
+
+
+							</div>
+						</div>
+					</div>			
+				</div>
+
+
+		</div>
+
+		<div class="container">
+			<div class="alert alert-warning text-center" role="alert">
+				<i class="fa fa-info-circle"></i> No existen mas evaluaciones creadas.
+			</div>
+		</div>
+
+
+				<footer class="footer-dare text-center">
+					<img src="images/logoFooterNM.png" alt="logo-NM-small">
+				</footer>	
+
+
+
+
+
+
+				<!-- jQuery Version 1.11.0 -->
+				<script src="js/jquery-1.11.0.js"></script>
+
+				<!-- Bootstrap Core JavaScript -->
+				<script src="js/bootstrap.min.js"></script>
+
+				<!-- IntroJS -->
+				<script type="text/javascript" src="js/intro.js"></script>
+
+				<script>
+
+				$('.collapse').collapse();
+
+				$( document ).ready(function(){
+					$("#toggle-nav").addClass("hidden");
+					$("#toggle-nav").css("z-index","5 !important");
+				});
+
+				$(window).on('scroll', function(){ 
+
+					var document_height = $( document ).height();
+					var window_height = $( window ).height();
+					//console.log("document"+document_height);
+					//console.log("window"+window_height);
+					var scrollTop = $( window ).scrollTop();
+					//console.log("scroll"+scrollTop);
+					//console.log("action:"+(document_height - window_height));
+					//console.log("scroll:"+scrollTop);
+					if(($(document).height() - $(window).height()) * 0.9 < $(window).scrollTop())
+					{
+						$("#toggle-nav").removeClass("hidden");
+					}else{
+						$("#toggle-nav").addClass("hidden");
+					}
+				});
+
+				
+
+				$(document).ready(function(){
+
+					var list_edit = $("#list-edit");
+
+					$('.guided-tour').click(function(){
+					
+						var introguide = introJs(); 
+						introguide.setOptions({
+							"nextLabel": "Siguiente",
+							"prevLabel": "Anterior",
+							"skipLabel": "Saltar",
+							"doneLabel": "Terminar"
+						});
+						introguide.start();
+
+						var counter = 0;
+
+						$(".introjs-prevbutton").click(function(){
+							counter --;
+							//console.log(counter);	
+							if (counter == 2){
+								$(".introjs-helperLayer, .introjs-tooltipReferenceLayer").css("height", "210px")	
+							}
+
+							if (counter == 2){
+								$(list_edit).hide();					
+							}
+						});
+							
+						$(".introjs-nextbutton").click(function(){
+							counter ++;
+							//console.log(counter);
+
+							if (counter == 2){
+								$(".introjs-helperLayer, .introjs-tooltipReferenceLayer").css("height", "210px")	
+							}
+
+							if (counter == 3){
+								$(list_edit).show();					
+							}
+
+						});
+
+						$(".introjs-skipbutton").click(function () {
+							 location.reload();	
+
+						});
+
+					});
+				});
+
+				</script>
+
+</body>
+</html>

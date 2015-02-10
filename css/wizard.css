@@ -1,0 +1,223 @@
+
+html {height: 100%;	background:#fff;}
+a{color:#0af}
+a.url-allstores{color:#0c0c0c;}
+
+
+
+/*form styles*/
+#msform {width: 100%;margin: 0 auto;padding:0;text-align: center;position: relative;border-bottom: 1px solid #E9EFF7;z-index:1;}
+
+#msform fieldset {border: 0 none;padding: 20px 0;width: 100%;position: absolute; background: linear-gradient(#D5D2D2, #F2EFEF);}
+
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {display: none;}
+/*progressbar*/
+#progressbar {margin:0;overflow: hidden;/*CSS counters to number the steps*/counter-reset: step;background: rgb(38, 52, 82);border-radius: 10px;padding: 14px;}
+
+#progressbar li {list-style-type: none;color: #FFF;text-transform: uppercase;width: 20%;float: left;position: relative;letter-spacing: 1px;z-index: 1;}
+
+#progressbar li:before {content: counter(step);counter-increment: step;width: 30px;line-height: 30px;display: block;font-size: 1.4em;color: #333;background: #FFF;border-radius: 15px;margin: 0 auto 8px auto;height: 30px;opacity: .65;}
+/*progressbar connectors*/
+#progressbar li:after {content: '';width: 100%;height: 7px;background: rgba(202, 216, 223, 0.08);position: absolute;left: -45%;top: 12px;z-index: -1;}
+#progressbar li:first-child:after {	content: none;}
+#progressbar li.active:before,  #progressbar li.active:after{background: #5cb85c;color: #fff; opacity:1;}
+
+/*End progressbar*/
+
+
+
+
+
+.progresswrap{margin: 0 auto;padding: 20px 4%;}
+
+#msform fieldset:nth-of-type(3) .innerpos:nth-of-type(1){width:44%;}
+
+#msform fieldset:nth-of-type(4) .innerpos:nth-of-type(1){width:44%;margin: 0 20px 0 0;}
+
+
+#msform input.previous.action-button{position: absolute;
+left: 0;
+top: 10px;
+font-size: 16px;
+padding: 10px;}
+
+#msform input.next.action-button{position: absolute;
+right: 0;
+top: 10px;
+font-size: 16px;
+padding: 10px;
+}
+#msform input.next.action-button.getstarted{position: relative;
+margin:0 auto;
+font-size: 18px;
+padding: 14px 12px;}
+
+
+.hidden-selected{display: none;}
+.asignaturas .well {padding: 0;}
+.num-materia {width: 15%}
+
+.well-icfes {background: rgba(69, 217, 236, 0.21);}
+.well-adicionales{background: rgba(220, 226, 171, 0.21);}
+
+.table-dare, .table-dare-add {border-spacing: 0px 7px;border-collapse: separate;}
+.table-dare tr {background: #4D7181; color: #fff;}
+.table-dare-add tr {background: #EEF0C5; color: #6E6B6B;}
+
+.table-dare .tema, .table-dare-add .tema {background: transparent; color: #000;}
+
+.table>thead>tr>th {vertical-align: middle; border-bottom: none;}
+.table>tbody>tr>td {vertical-align: middle;}
+#reportes-estudiantes .table>tbody>tr>td {vertical-align: middle; width: 100px;}
+
+#msform h3 {margin: 0;}
+
+.templates{margin-top: 20px;}
+
+
+
+/*  css check */
+
+
+[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"] + label:after {
+  content: '';
+  position: absolute;
+}
+[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  transition: color .4s;
+}
+[type="checkbox"] + label:after {
+  width: 45px; 
+  height: 45px;
+  left: 0px;
+  transition: all .4s;
+}
+/* OFF */
+[type="checkbox"]:not(:checked) + label:after {
+  background: url("../images/check_off.png") center no-repeat;
+}
+/* ON */
+[type="checkbox"]:checked + label {
+  color: #fff;
+}
+[type="checkbox"]:checked + label:after {
+  background: url("../images/check_on.png") center no-repeat;
+}
+
+
+
+.small-check [type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+.small-check [type="checkbox"] + label:after {
+  content: '';
+  position: absolute;
+}
+.small-check [type="checkbox"] + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  transition: color .4s;
+}
+.small-check [type="checkbox"] + label:after {
+  width: 23px; 
+  height: 23px;
+  left: 0px;
+  transition: all .4s;
+}
+/* OFF */
+.small-check [type="checkbox"]:not(:checked) + label:after {
+  background: url("../images/check_off.png") center no-repeat; background-size: cover;
+}
+/* ON */
+.small-check [type="checkbox"]:checked + label {
+  color: #fff;
+}
+.small-check [type="checkbox"]:checked + label:after {
+  background: url("../images/check_on.png") center no-repeat; background-size: cover;
+}
+
+
+.small-check-list [type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+.small-check-list [type="checkbox"] + label:after {
+  content: '';
+  position: absolute;
+}
+.small-check-list [type="checkbox"] + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  transition: color .4s;
+}
+.small-check-list [type="checkbox"] + label:after {
+  width: 28px; 
+  height: 30px;
+  left: 0px;
+  transition: all .4s;
+}
+/* OFF */
+.small-check-list [type="checkbox"]:not(:checked) + label:after {
+  background: url("../images/check_off.png") center no-repeat; background-size: cover;
+}
+/* ON */
+.small-check-list [type="checkbox"]:checked + label {
+  color: #fff;
+}
+.small-check-list [type="checkbox"]:checked + label:after {
+  background: url("../images/check_on.png") center no-repeat; background-size: cover;
+}
+
+
+.style-checkbox{margin: 0 auto; height: 50px; width: 50px;}
+.style-checkbox-sm {margin: 0 auto; height: 23px; width: 23px;}
+.small-check-list {position: relative; top: -15px;}
+
+.resaltado-blue img{border: 4px solid #2C2A7C;} 
+.resaltado-red img{border: 4px solid #D21E22;} 
+
+.icon-red  {color: #D21E22;}
+
+.btn-download {margin-top: 15px;}
+
+
+.btn-next-wizard, .btn-previous-wizard{width: 20%;}
+
+.show-theme{color: #B2AFAF;font-size: .9em;float: right;}
+
+.panel-title a:hover {color: rgb(0, 170, 255);text-decoration: none;}
+
+.tema-check{width: 50px;}
+
+
+.title-coustom{ width: 60%; display: inline-block;}
+
+
+#msform fieldset footer {margin-top: 1em; margin-bottom: -1.4em;}
+
+.list-newAsignature li {margin: 10px 0}
+.input-addNew-asignature{ display: inline-block; float: left; margin-right: 10px; width: 40px; }
+.text-newAsignature{ display: inline-block;}
+
+
+@media (max-width: 480px) {
+.btn-next-wizard, .btn-previous-wizard {width: 40%;}
+.title-coustom{width: 100%;}
+.show-theme {display: none;}
+}
+
+
+
+		
